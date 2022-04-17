@@ -6,6 +6,9 @@ MLflow project template
 ### STEP 01- Create a repository by using template repository
 
 ### STEP 02- Clone the new repository
+```bash
+git clone <repository_url>
+``` 
 
 ### STEP 03- Create a conda environment after opening the repository in VSCODE
 
@@ -16,7 +19,7 @@ conda create --prefix ./env python=3.7 -y
 ```bash
 conda activate ./env
 ```
-OR
+#### Alternate command to activate environment 
 ```bash
 source activate ./env
 ```
@@ -31,4 +34,19 @@ pip install -r requirements.txt
 conda env export > conda.yaml
 ```
 
-### STEP 06- commit and push the changes to the remote repository
+### STEP 06- commit and push the changes to the remote repository (execute below commands only once to push changes first time)
+```bash
+git add .
+git status
+git commit -m "commit message"
+git remote add origin 'your_repository_url'
+git branch -m master main
+git push -u origin main
+```
+
+#### After first commit for subsequent changes just execute below commands
+```bash
+git add .
+git commit -m "commit message"
+git push
+``` 
